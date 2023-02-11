@@ -8,4 +8,4 @@
 * Python
 
 [GitHub](https://github.com/Weihong-Liu/my-team-learning.git)
-[Get Started](https://plutos.org.cn/my-team-learning/#/)
+[Get Started](https://plutos.org.cn/my-team-learning/#/README)

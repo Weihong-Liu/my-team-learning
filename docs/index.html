@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <title>Plutos的组队学习</title>
+  <link rel="shortcut icon" href="/img/avatar.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
@@ -16,20 +17,31 @@
     window.$docsify = {
       name: '我的组队学习笔记📒',
       repo: 'https://github.com/Weihong-Liu/my-team-learning.git',
-      coverpage: true,//封面
+      coverpage: false,//封面
       loadSidebar: true,//定制侧边栏
+      auto2top: true,
+      sidebarDisplayLevel: 1,
+      subMaxLevel: 0,
       alias: {
         '/.*/_sidebar.md': '/_sidebar.md'
       },
       count: {//字数统计
         countable: true,
+        position: 'top',
+        margin: '10px',
+        float: 'right',
         fontsize: '0.9em',
         color: 'rgb(90,90,90)',
-        language: 'chinese'
+        language: 'chinese',
+        isExpected: true
       },
-      search: {//搜索
-        placeholder: '搜索',
-        noData: '找不到结果！',
+      // search: {//搜索
+      //   placeholder: '搜索',
+      //   noData: '找不到结果！',
+      // },
+      pagination: {
+        previousText: '上一章节',
+        nextText: '下一章节',
       },
 
     }
@@ -47,12 +59,15 @@
   <!-- 复制剪切板 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
   <!-- search -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@latest/lib/plugins/search.js"></script>
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify@latest/lib/plugins/search.js"></script> -->
   <!-- 引入 css -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
 
   <!-- 引入 script -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.js"></script>
+  <!-- 分页导航pagination -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
 </body>
 
 </html>

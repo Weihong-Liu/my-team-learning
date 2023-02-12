@@ -35,10 +35,10 @@
         language: 'chinese',
         isExpected: true
       },
-      // search: {//搜索
-      //   placeholder: '搜索',
-      //   noData: '找不到结果！',
-      // },
+      search: {//搜索
+        placeholder: '搜索',
+        noData: '找不到结果！',
+      },
       pagination: {
         previousText: '上一章节',
         nextText: '下一章节',
@@ -47,27 +47,26 @@
     }
 
   </script>
-  <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <!-- 代码高亮 -->
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-php.min.js"></script>
-  <!-- 定制侧边栏 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-  <!-- 字数统计 -->
-  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
-  <!-- 复制剪切板 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-  <!-- search -->
-  <!-- <script src="//cdn.jsdelivr.net/npm/docsify@latest/lib/plugins/search.js"></script> -->
-  <!-- 引入 css -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
+  <!-- Put them above docsify.min.js -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@latest/lib/docsify.min.js"></script>
+  <!-- code render-->
+  <script src="//cdn.jsdelivr.net/npm/prismjs@latest/components/prism-bash.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@latest/components/prism-python.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination@latest/dist/docsify-pagination.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
 
-  <!-- 引入 script -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.js"></script>
-  <!-- 分页导航pagination -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked@3"></script>
+  <!-- CDN files for docsify-katex -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+
+  <!-- sidebar collapse -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse@latest/dist/docsify-sidebar-collapse.min.js"></script>
+  <!-- search -->
+  <script src="//cdn.jsdelivr.net/npm/docsify@latest/lib/plugins/search.js"></script>
+  <!-- count -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-count@latest/dist/countable.min.js"></script>
 </body>
 
 </html>

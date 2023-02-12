@@ -509,6 +509,7 @@ bash myhadoop.sh start
 ./run-wordcount.sh 3.3.1 #3.3.1为Hadoop对应版本号
 ```
 执行结果如下：
+
 ```
 2023-02-12 07:11:04,331 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at hadoop-slave2/172.19.0.5:8032
 2023-02-12 07:11:04,571 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/root/.staging/job_1676185054018_0001

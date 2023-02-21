@@ -3,6 +3,9 @@
 # the default node number is 3
 N=${1:-3}
 
+# 创建网桥
+docker network rm hadoop1
+docker network create --driver=bridge hadoop
 
 # start hadoop hadoop-master container
 sudo docker rm -f hadoop-master &> /dev/null

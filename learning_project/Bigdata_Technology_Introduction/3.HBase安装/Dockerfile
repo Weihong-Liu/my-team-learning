@@ -20,11 +20,13 @@ ADD resources/hadoop-3.3.1-aarch64.tar.gz /usr/local/hadoop
 ADD resources/jdk-8u301-linux-aarch64.tar.gz /usr/local/hadoop
 ADD resources/scala-2.12.14.tgz /usr/local/hadoop
 ADD resources/spark-3.2.1-bin-hadoop3.2.tgz /usr/local/hadoop
+ADD resources/hbase-2.5.3-bin.tar.gz /usr/local/hadoop
 
 RUN mv /usr/local/hadoop/hadoop-* /usr/local/hadoop/hadoop && \
     mv /usr/local/hadoop/jdk* /usr/local/hadoop/jdk1.8 && \
     mv /usr/local/hadoop/scala* /usr/local/hadoop/scala2.12 && \
-    mv /usr/local/hadoop/spark* /usr/local/hadoop/spark3.2.1
+    mv /usr/local/hadoop/spark* /usr/local/hadoop/spark3.2.1 && \
+    mv /usr/local/hadoop/hbase* /usr/local/hadoop/hbase-2.53
 
 # set environment variable
 ENV JAVA_HOME=/usr/local/hadoop/jdk1.8
@@ -41,6 +43,9 @@ ENV PATH=$PATH:$SCALA_HOME/bin
 ENV SPARK_HOME=/usr/local/hadoop/spark3.2.1
 ENV PATH=$PATH:$SPARK_HOME/bin
 
+ENV HBASE_HOME=/usr/local/hadoop/hbase-2.53
+ENV PATH=$PATH:$HBASE_HOME/bin
+
 # ssh without key
 RUN ssh-keygen -t rsa -f ~/.ssh/id_rsa -P '' && \
     cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
@@ -52,6 +57,7 @@ RUN mkdir -p ~/hdfs/namenode && \
 
 COPY config/* /tmp/
 COPY hadoop-config/* /tmp/
+COPY hbase-config/* /tmp/
 
 RUN mv /tmp/ssh_config ~/.ssh/config && \
     mv /tmp/hadoop-env.sh $HADOOP_HOME/etc/hadoop/ && \
@@ -60,6 +66,8 @@ RUN mv /tmp/ssh_config ~/.ssh/config && \
     mv /tmp/mapred-site.xml $HADOOP_HOME/etc/hadoop/ && \
     mv /tmp/yarn-site.xml $HADOOP_HOME/etc/hadoop/ && \
     mv /tmp/workers $HADOOP_HOME/etc/hadoop/ && \
+    mv /tmp/hbase-env.sh $HBASE_HOME/conf/ && \
+    mv /tmp/hbase-site.xml $HBASE_HOME/conf/ && \
     mv /tmp/myhadoop.sh ~/ && \
     mv /tmp/run-wordcount.sh ~/
 

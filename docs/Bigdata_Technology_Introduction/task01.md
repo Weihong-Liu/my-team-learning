@@ -348,11 +348,10 @@ ENV HADOOP_HOME=/usr/local/hadoop/hadoop
 ENV PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin 
 
 ENV SCALA_HOME=/usr/local/hadoop/scala2.12
-ENV PATH=$PATH:$SCALA_HOME/bin:$HADOOP_HOME/sbin 
+ENV PATH=$PATH:$SCALA_HOME/bin
 
 ENV SPARK_HOME=/usr/local/hadoop/spark3.2.1
-ENV PATH=$PATH:$SPARK_HOME/bin:$HADOOP_HOME/sbin 
-
+ENV PATH=$PATH:$SPARK_HOME/bin
 # ssh without key
 RUN ssh-keygen -t rsa -f ~/.ssh/id_rsa -P '' && \
     cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
@@ -363,20 +362,19 @@ RUN mkdir -p ~/hdfs/namenode && \
     mkdir $HADOOP_HOME/tmp
 
 COPY config/* /tmp/
+COPY hadoop-config/* /tmp/
 
 RUN mv /tmp/ssh_config ~/.ssh/config && \
-    mv /tmp/hadoop-config/hadoop-env.sh $HADOOP_HOME/etc/hadoop/hadoop-env.sh && \
-    mv /tmp/hadoop-config/hdfs-site.xml $HADOOP_HOME/etc/hadoop/hdfs-site.xml && \ 
-    mv /tmp/hadoop-config/core-site.xml $HADOOP_HOME/etc/hadoop/core-site.xml && \
-    mv /tmp/hadoop-config/mapred-site.xml $HADOOP_HOME/etc/hadoop/mapred-site.xml && \
-    mv /tmp/hadoop-config/yarn-site.xml $HADOOP_HOME/etc/hadoop/yarn-site.xml && \
-    mv /tmp/hadoop-config/workers $HADOOP_HOME/etc/hadoop/workers && \
-    mv /tmp/start-hadoop.sh ~/start-hadoop.sh && \
-    mv /tmp/stop-hadoop.sh ~/stop-hadoop.sh && \
-    mv /tmp/run-wordcount.sh ~/run-wordcount.sh
+    mv /tmp/hadoop-env.sh $HADOOP_HOME/etc/hadoop/ && \
+    mv /tmp/hdfs-site.xml $HADOOP_HOME/etc/hadoop/ && \ 
+    mv /tmp/core-site.xml $HADOOP_HOME/etc/hadoop/ && \
+    mv /tmp/mapred-site.xml $HADOOP_HOME/etc/hadoop/ && \
+    mv /tmp/yarn-site.xml $HADOOP_HOME/etc/hadoop/ && \
+    mv /tmp/workers $HADOOP_HOME/etc/hadoop/ && \
+    mv /tmp/myhadoop.sh ~/ && \
+    mv /tmp/run-wordcount.sh ~/
 
-RUN chmod +x ~/start-hadoop.sh && \
-    chmod +x ~/stop-hadoop.sh && \
+RUN chmod +x ~/myhadoop.sh && \
     chmod +x ~/run-wordcount.sh && \
     chmod +x $HADOOP_HOME/sbin/start-dfs.sh && \
     chmod +x $HADOOP_HOME/sbin/start-yarn.sh 

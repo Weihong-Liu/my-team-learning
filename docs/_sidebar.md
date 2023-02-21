@@ -1,3 +1,5 @@
 - [目录](README.md)
     - 第46期大数据技术导论
         - [Task01 详读第1、2章Hadoop内容](Bigdata_Technology_Introduction/task01.md) 
+        - [Task02 详读第3章HDFS内容](Bigdata_Technology_Introduction/task02.md) 
+        - [Task03 详读第4章HBase内容](Bigdata_Technology_Introduction/task03.md) 

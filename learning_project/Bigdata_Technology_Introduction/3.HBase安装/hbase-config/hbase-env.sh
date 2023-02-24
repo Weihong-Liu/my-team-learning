@@ -209,5 +209,5 @@
 # Additional arguments passed to jshell invocation
 # export HBASE_JSHELL_ARGS="--startup DEFAULT --startup PRINTING --startup hbase_startup.jsh"
 export JAVA_HOME=/usr/local/hadoop/jdk1.8/ # JDK的安装目录
-export HBASE_CLASSPATH=/usr/local/hadoop/hbase/conf # 本机HBase安装目录下的conf目录
+export HBASE_CLASSPATH=/usr/local/hadoop/hbase2.53/conf # 本机HBase安装目录下的conf目录
 export HBASE_MANAGES_ZK=true # 由HBase自己管理zookeeper，不需要单独的zookeeper

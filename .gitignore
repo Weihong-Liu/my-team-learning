@@ -1,0 +1,12 @@
+node_modules
+learning_project/Bigdata_Technology_Introduction/3.HBase安装/resources/apache-flume-1.9.0-bin.tar.gz
+learning_project/Bigdata_Technology_Introduction/3.HBase安装/resources/apache-zookeeper-3.6.3-bin.tar.gz
+learning_project/Bigdata_Technology_Introduction/3.HBase安装/resources/apache-hive-2.3.9-bin.tar.gz
+learning_project/Bigdata_Technology_Introduction/3.HBase安装/resources/hadoop-3.3.1-aarch64.tar.gz
+learning_project/Bigdata_Technology_Introduction/3.HBase安装/resources/hbase-2.5.3-bin.tar.gz
+learning_project/Bigdata_Technology_Introduction/3.HBase安装/resources/jdk-8u301-linux-aarch64.tar.gz
+learning_project/Bigdata_Technology_Introduction/3.HBase安装/resources/Python-3.8.0.tgz
+learning_project/Bigdata_Technology_Introduction/3.HBase安装/resources/scala-2.12.14.tgz
+learning_project/Bigdata_Technology_Introduction/3.HBase安装/resources/spark-3.2.1-bin-hadoop3.2.tgz
+learning_project/Bigdata_Technology_Introduction/3.HBase安装/resources/zeppelin-0.10.1-bin-all.tgz
+learning_project/Bigdata_Technology_Introduction/3.HBase安装/resources/zookeeper-3.4.14.tar.gz

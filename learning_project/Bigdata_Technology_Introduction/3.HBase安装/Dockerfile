@@ -27,6 +27,8 @@ RUN mv /usr/local/hadoop/hadoop-* /usr/local/hadoop/hadoop && \
     mv /usr/local/hadoop/scala* /usr/local/hadoop/scala2.12 && \
     mv /usr/local/hadoop/spark* /usr/local/hadoop/spark3.2.1 && \
     mv /usr/local/hadoop/hbase* /usr/local/hadoop/hbase-2.53
+# hbase 解决日志Jar包冲突
+RUN mv /usr/local/hadoop/hbase-2.53/lib/log4j-slf4j-impl-2.17.2.jar /usr/local/hadoop/hbase-2.53/lib/log4j-slf4j-impl-2.17.2.bak
 
 # set environment variable
 ENV JAVA_HOME=/usr/local/hadoop/jdk1.8

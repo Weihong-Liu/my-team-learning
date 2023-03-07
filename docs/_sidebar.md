@@ -6,3 +6,4 @@
         - [Task04 详读第5章Mapreduce内容](Bigdata_Technology_Introduction/task04.md) 
         - [Task05 提前阅读并完成第6章期中大作业](Bigdata_Technology_Introduction/task05.md) 
         - [Task06 详读第7章Mapreduce内容](Bigdata_Technology_Introduction/task06.md) 
+        - [Task08 提前阅读并完成第10章期末大作业](Bigdata_Technology_Introduction/task08.md)
